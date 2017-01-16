@@ -5,6 +5,7 @@ $font-size:         1.7em;
 $letter-spacing:    -1px;
 $font-weight:       bold;
 $anchor-decoration: none;
+$image-size:        250px;
 
 #logo {
   float: left;
@@ -14,4 +15,10 @@ $anchor-decoration: none;
   &:hover {
     text-decoration: $anchor-decoration;
   }
+}
+
+.img-profile {
+  float: right;
+  width: $image-size;
+  height: $image-size;
 }
