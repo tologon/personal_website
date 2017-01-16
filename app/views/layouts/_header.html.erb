@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+            <a class="navbar-brand page-scroll" href="#page-top"><%= full_title %></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,13 +19,13 @@
                     <a class="page-scroll" href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <a class="page-scroll" href="#<%= header_menus(:projects).downcase %>"><%= header_menus(:projects) %></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">Services</a>
+                    <a class="page-scroll" href="#<%= header_menus(:resume).downcase %>"><%= header_menus(:resume) %></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
+                    <a class="page-scroll" href="#<%= header_menus(:contact).downcase %>"><%= header_menus(:contact) %></a>
                 </li>
             </ul>
         </div>

@@ -8,4 +8,9 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
+
+  def header_menus(option = '')
+    header_menus = {projects: 'Projects', resume: 'Resume', contact: 'Contact'}
+    header_menus[option]
+  end
 end
