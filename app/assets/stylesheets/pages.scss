@@ -18,7 +18,17 @@ $image-size:        250px;
 }
 
 .img-profile {
+  // vertical-align: middle;
   float: right;
-  width: $image-size;
-  height: $image-size;
+  max-height: $image-size;
+  max-width: $image-size;
+}
+
+.row p {
+  font-size: 20px;
+}
+
+p.intro {
+  text-align: justify;
+  // vertical-align: middle;
 }
