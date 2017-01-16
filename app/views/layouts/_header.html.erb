@@ -18,15 +18,11 @@
                 <li class="hidden">
                     <a class="page-scroll" href="#page-top"></a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#<%= header_menus(:projects).downcase %>"><%= header_menus(:projects) %></a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#<%= header_menus(:resume).downcase %>"><%= header_menus(:resume) %></a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#<%= header_menus(:contact).downcase %>"><%= header_menus(:contact) %></a>
-                </li>
+                <% [:projects, :resume, :contact].each do |key| %>
+                  <li>
+                      <a class="page-scroll" href="#<%= header_menus(key).downcase %>"><%= header_menus(key) %></a>
+                  </li>
+                <% end %>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
