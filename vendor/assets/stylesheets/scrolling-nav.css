@@ -33,32 +33,32 @@ of those sections to manage the look and feel of the site. */
 
 .intro-section {
     /*height: 100%;*/
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 90px;
+    padding-bottom: 10px;
     text-align: center;
     background: #fff;
 }
 
 .projects-section {
     /*height: 100%;*/
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
     background: #eee;
 }
 
 .resume-section {
     /*height: 100%;*/
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
     background: #fff;
 }
 
 .contact-section {
     /*height: 100%;*/
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
     background: #eee;
 }
