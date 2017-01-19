@@ -11,7 +11,6 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select 'title', @name
     assert_select 'a.page-scroll', 'Projects'
-    assert_select 'a.page-scroll', 'Resume'
     assert_select 'a.page-scroll', 'Contact'
   end
 
