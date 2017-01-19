@@ -25,8 +25,12 @@
           <li><strong>Others:</strong> git, makefile, HTTP signature, PostgreSQL, OpenCV, Raspberry Pi</li>
         </ul>
       </p>
-
-      <br><br>
-      <a class="btn btn-default page-scroll" href="#projects">Click Me to Scroll Down!</a>
+      <br>
     </div>
+
+    <%=
+      button_to 'View my resume', pages_resume_pdf_path,
+      method: "get", class: "btn btn-success btn-lg",
+      form: { target: "_blank" }
+    %>
 </div>

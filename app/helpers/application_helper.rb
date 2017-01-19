@@ -10,7 +10,7 @@ module ApplicationHelper
   end
 
   def header_menus(option = '')
-    header_menus = {intro: 'Intro', projects: 'Projects', resume: 'Resume', contact: 'Contact'}
+    header_menus = {intro: 'Intro', projects: 'Projects', contact: 'Contact'}
     header_menus[option]
   end
 end

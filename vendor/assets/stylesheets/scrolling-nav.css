@@ -47,18 +47,10 @@ of those sections to manage the look and feel of the site. */
     background: #eee;
 }
 
-.resume-section {
-    /*height: 100%;*/
-    padding-top: 30px;
-    padding-bottom: 10px;
-    text-align: center;
-    background: #fff;
-}
-
 .contact-section {
     /*height: 100%;*/
     padding-top: 30px;
     padding-bottom: 10px;
     text-align: center;
-    background: #eee;
+    background: #fff;
 }

@@ -1,4 +1,4 @@
-<% [:intro, :projects, :resume, :contact].each do |key| %>
+<% [:intro, :projects, :contact].each do |key| %>
   <section id="<%= header_menus(key).downcase %>" class="<%= header_menus(key).downcase %>-section">
       <div class="container-fluid">
         <%= render "#{key}" %>
