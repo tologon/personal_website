@@ -23,7 +23,15 @@
               <%= text_area :user, :message, required: true, rows: '5', placeholder: "Your message...", class: "form-control" %>
             </div>
           </div>
-          <%= submit_tag "Send", class: 'btn btn-success btn-lg pull-right' %>
+
+          <div class="form-group pull-right">
+            <div class="col-xs-9">
+              <%= recaptcha_tags site_key: ENV["RECAPTCHA_PUBLIC_KEY"] %>
+            </div>
+            <div class="col-xs-3">
+              <%= submit_tag "Send", class: 'btn btn-success btn-lg' %>
+            </div>
+          </div>
         <% end %>
     </div>
 </div>

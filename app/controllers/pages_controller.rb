@@ -9,9 +9,15 @@ class PagesController < ApplicationController
   # POST /contact
   def contact
     @email = params[:user][:message]
-    ContactMailer.new_message(@email).deliver_later
-    respond_to do |format|
-      format.js { flash[:notice] = "Thank you for your message!" }
+    if verify_recaptcha
+      ContactMailer.new_message(@email).deliver_later
+      respond_to do |format|
+        format.js { flash[:notice] = "Thank you for your message!" }
+      end
+    else
+      respond_to do |format|
+        format.js { flash[:error] = "Couldn't verify that you are a human!" }
+      end
     end
   end
 end

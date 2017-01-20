@@ -16,6 +16,8 @@ gem 'jbuilder',     '2.4.1'
 gem 'thor',         '0.19.1'
 gem 'pg',           '0.18.4'
 
+gem "recaptcha", '4.0.1', require: "recaptcha/rails"
+
 group :development, :test do
   gem 'byebug',  '9.0.0', platform: :mri
 end
@@ -35,7 +37,6 @@ group :test do
 end
 
 group :production do
-
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
