@@ -1,1 +1,7 @@
-$("#flash").html('<%= j render partial: "notice_banner" %>');
+$("#flash").html('<%= j render partial: "contact_alert" %>');
+
+$(function() {
+  setTimeout(function() {
+    $('.alert').slideUp(1000);
+  }, 1000);
+});
