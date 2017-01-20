@@ -8,7 +8,8 @@ class PagesController < ApplicationController
 
   # POST /contact
   def contact
-    @message = params[:message]
-    ContactMailer.new_message(@message).deliver_later
+    @email = params[:user][:message]
+    ContactMailer.new_message(@email).deliver_later
+    redirect_to(:back)
   end
 end

@@ -1,9 +1,9 @@
 class ContactMailer < ApplicationMailer
   default from: 'notifications@eshimkanov.com'
 
-  def new_message(message)
-    @message = message
+  def new_message(email)
+    @email = email
     @url = 'http://www.eshimkanov.com/'
-    mail(to: @message.email, subject: 'Test from eshimkanov.com')
+    mail(to: 'teshimkanov@gmail.com', subject: 'Test from eshimkanov.com')
   end
 end
