@@ -1,7 +1,12 @@
 <div class="row">
     <div class="col-lg-12">
         <h1>Contact Me</h1>
-        <%= form_tag(pages_contact_path, method: "get") do %>
+        <%= form_tag(pages_contact_path, method: "get", remote: true) do %>
+          <div id="flash">
+            <% if notice.present? %>
+              <%= render partial: "notice_banner" %>
+            <% end %>
+          </div>
           <%= label_tag(:message, "Your email:") %>
           <%= email_field(:user, :message) %>
           <%= submit_tag "Send" %>

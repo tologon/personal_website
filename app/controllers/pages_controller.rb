@@ -10,6 +10,8 @@ class PagesController < ApplicationController
   def contact
     @email = params[:user][:message]
     ContactMailer.new_message(@email).deliver_later
-    redirect_to(:back)
+    respond_to do |format|
+      format.js { flash[:notice] = "Thank you for your message!" }
+    end
   end
 end
