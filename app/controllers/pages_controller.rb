@@ -7,7 +7,8 @@ class PagesController < ApplicationController
   end
 
   def contact
-    @user = params[:user]
+    # required for usage in emails
+    @user = user_params.to_h
     if verify_recaptcha(secret_key: ENV['RECAPTCHA_PRIVATE_KEY'])
       ContactMailer.thank_you(@user).deliver_later
       ContactMailer.new_message(@user).deliver_later
@@ -20,4 +21,9 @@ class PagesController < ApplicationController
       end
     end
   end
+
+  private
+    def user_params
+      params.require(:user).permit(:name, :email, :message)
+    end
 end
