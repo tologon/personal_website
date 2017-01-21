@@ -7,9 +7,10 @@ class PagesController < ApplicationController
   end
 
   def contact
-    @email = params[:user][:message]
+    @user = params[:user]
     if verify_recaptcha(secret_key: ENV['RECAPTCHA_PRIVATE_KEY'])
-      ContactMailer.new_message(@email).deliver_later
+      ContactMailer.thank_you(@user).deliver_later
+      ContactMailer.new_message(@user).deliver_later
       respond_to do |format|
         format.js { flash[:notice] = "Thank you for your message!" }
       end
