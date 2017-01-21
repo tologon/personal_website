@@ -1,6 +1,10 @@
-Welcome to <%= @url %>!
-===============================================
+<% unless @user[:name].blank? %>
+  You have new message from <%= @user[:name] %>!
+<% else %>
+  You have new message!
+<% end %>
+==============================================
+Email: <%= @user[:email] %>
 
-You email can be seen below:
-
-<%= @email %>
+Message:
+<%= @user[:message] %>

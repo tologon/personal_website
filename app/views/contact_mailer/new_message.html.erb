@@ -4,10 +4,13 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to <%= @url %>!</h1>
-    <p>
-      You email can be seen below:
-    </p>
-    <p><%= @email %></p>
+    <% unless @user[:name].blank? %>
+      <h3>You have new message from <%= @user[:name] %>!</h3>
+    <% else %>
+      <h3>You have new message!</h3>
+    <% end %>
+    <h4>Email: <%= @user[:email] %></h4>
+    <h4>Message:</h4>
+    <p><%= @user[:message] %></p>
   </body>
 </html>

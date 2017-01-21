@@ -1,0 +1,10 @@
+<% unless @user[:name].blank? %>
+  Thank you for sending a message, <%= @user[:name] %>!
+  I will to reply to you as soon as I can.
+<% else %>
+  Thank you for sending a message!
+  I will to reply to you as soon as I can.
+<% end %>
+==============================================
+Your message can be seen below:
+<%= @user[:message] %>

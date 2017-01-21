@@ -1,5 +1,6 @@
 class ContactMailer < ApplicationMailer
   default from: 'no-reply@eshimkanov.com'
+  default sender: 'no-reply@eshimkanov.com'
 
   def new_message(user)
     @user = user

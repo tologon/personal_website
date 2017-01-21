@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <% unless @user[:name].blank? %>
+      <h3>Thank you for sending a message, <%= @user[:name] %>!</h3>
+      <h3>I will to reply to you as soon as I can.</h3>
+    <% else %>
+      <h3>Thank you for sending a message!</h3>
+      <h3>I will to reply to you as soon as I can.</h3>
+    <% end %>
+    <h4>Your message can be seen below:</h4>
+    <p><%= @user[:message] %></p>
+  </body>
+</html>
