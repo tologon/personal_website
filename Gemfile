@@ -16,6 +16,7 @@ gem 'jbuilder',     '2.4.1'
 gem 'thor',         '0.19.1'
 gem 'pg',           '0.18.4'
 gem 'scout_apm',    '2.1.20'
+gem 'config',       '1.4.0'
 
 gem "recaptcha", '4.0.1', require: "recaptcha/rails"
 
