@@ -1,35 +1,27 @@
 <div class="row">
     <div class="col-lg-12">
-      <h1>About Me</h1>
+      <h1><%= Settings.home.intro.title %></h1>
     </div>
     <div class="col-sm-3 col-xs-12 text-center">
-      <%= image_tag 'profile.png', class: "img-responsive img-circle img-profile" %>
+      <%= image_tag Settings.home.intro.image, class: "img-responsive img-circle img-profile" %>
     </div>
     <div class="col-sm-9 col-xs-12">
       <p class="intro">
-        I have found my true passion in programming.
-        I love to solve challenges, whether it is navigating a robot to
-        its destination using only Bluetooth, or recognizing printed digits on an image.
-        Having a background in Computer Science and a great, hands-on experience as a
-        Software QA Engineer intern at SessionM (the Boston start-up), I help
-        people to solve their problems by brainstorming, planning, and coding solutions.
+        <%= Settings.home.intro.main_text %>
       </p>
       <p>
-        <b>Technical skills:</b>
+        <b><%= Settings.home.intro.skills_title %></b>
         <ul>
-          <li><strong>Languages:</strong> intermediate - Java, Ruby; elementary - Python, C++, JavaScript, Assembly</li>
-          <li><strong>Web:</strong> Ruby on Rails, HTML/CSS/JS, ChartJS, RESTful APIs, MVC</li>
-          <li><strong>Web services:</strong> Heroku, AWS - EC2</li>
-          <li><strong>Mobile:</strong> Android Studio, XML</li>
-          <li><strong>Testing:</strong> Jenkins, Travis, JMeter, Selenium</li>
-          <li><strong>Others:</strong> git, makefile, HTTP signature, PostgreSQL, OpenCV, Raspberry Pi</li>
+          <% Settings.home.intro.skills.each do |type, skills| %>
+            <li><strong><%= type %>: </strong><%= skills %></li>
+          <% end %>
         </ul>
       </p>
       <br>
     </div>
 
     <%=
-      button_to 'View my resume', pages_resume_pdf_path,
+      button_to Settings.home.intro.resume_button, pages_resume_pdf_path,
       method: "get", class: "btn btn-success btn-lg",
       form: { target: "_blank" }
     %>

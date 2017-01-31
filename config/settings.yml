@@ -1,4 +1,26 @@
 name: Tologon Eshimkanov
 # ugly solution that needs refactoring
-home_sections: {intro: 'Intro', projects: 'Projects', contact: 'Contact'}
 header_menus: [projects, contact]
+home_sections: {intro: 'Intro', projects: 'Projects', contact: 'Contact'}
+
+home:
+  intro:
+    title: About Me
+    image: profile.png
+    main_text:
+      I have found my true passion in programming.
+      I love to solve challenges, whether it is navigating a robot to
+      its destination using only Bluetooth, or recognizing printed digits on an image.
+      Having a background in Computer Science and a great, hands-on experience as a
+      Software QA Engineer intern at SessionM (the Boston start-up), I help
+      people to solve their problems by brainstorming, planning, and coding solutions.
+    skills_title: Technical skills
+    skills: {
+      Languages: 'intermediate - Java, Ruby; elementary - Python, C++, JavaScript, Assembly',
+      Web: 'Ruby on Rails, HTML/CSS/JS, ChartJS, RESTful APIs, MVC',
+      Web services: 'Heroku, AWS - EC2',
+      Mobile: 'Android Studio, XML',
+      Testing: 'Jenkins, Travis, JMeter, Selenium',
+      Others: 'git, makefile, HTTP signature, PostgreSQL, OpenCV, Raspberry Pi'
+      }
+    resume_button: View my resume
