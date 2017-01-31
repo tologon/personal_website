@@ -8,19 +8,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a id="logo" class="navbar-brand page-scroll" href="#page-top"><%= full_title %></a>
+            <a id="logo" class="navbar-brand page-scroll" href="#page-top"><%= Settings.name %></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <!-- Hidden li included to remove active class from about link when scrolled up past first section -->
                 <li class="hidden">
                     <a class="page-scroll" href="#page-top"></a>
                 </li>
-                <% [:projects, :contact].each do |key| %>
+                <% Settings.header_menus.each do |key| %>
                   <li>
-                      <a class="page-scroll" href="#<%= header_menus(key).downcase %>"><%= header_menus(key) %></a>
+                      <a class="page-scroll" href="#<%= Settings.home_sections[key].downcase %>"><%= Settings.home_sections[key] %></a>
                   </li>
                 <% end %>
             </ul>
