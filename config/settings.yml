@@ -1,1 +1,4 @@
-hello: 'hello Config gem!'
+name: Tologon Eshimkanov
+# ugly solution that needs refactoring
+home_sections: {intro: 'Intro', projects: 'Projects', contact: 'Contact'}
+header_menus: [projects, contact]
