@@ -69,3 +69,15 @@ projects:
       features that a standard game have: a grid with mines, reset button, flagging
       feature, timer, and how-to-play window.'
 # ------------------------------------------------------------------------------
+contact:
+  title: Contact Me
+  social_media_text: 'You can always find me on the following websites:'
+  form_text: "For quick response, fill out the form below & I'll contact you as soon as I can."
+  social_media: [{
+    title:  'GitHub',
+    link:   'https://github.com/tologon',
+    text:   '- where you can find my currrent and previous projects.'},{
+    title:  'LinkedIn',
+    link:   'https://www.linkedin.com/in/tologon',
+    text:   '- where you can see my professional profile and connections.'}]
+# ------------------------------------------------------------------------------

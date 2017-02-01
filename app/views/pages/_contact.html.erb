@@ -1,18 +1,16 @@
 <div class="row">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
-        <h1>Contact Me</h1>
-        <h3>You can always find me on the following websites:</h3>
+        <h1><%= Settings.contact.title %></h1>
+        <h3><%= Settings.contact.social_media_text %></h3>
         <ul>
-          <li>
-            <%= link_to 'GitHub', 'https://github.com/tologon', target: '_blank' %>
-            - where you can find my currrent and previous projects.
-          </li>
-          <li>
-            <%= link_to 'LinkedIn', 'https://www.linkedin.com/in/tologon', target: '_blank' %>
-            - where you can see my professional profile and connections.
-          </li>
+          <% Settings.contact.social_media.each do |media| %>
+            <li>
+              <%= link_to media[:title], media[:link], target: '_blank' %>
+              <%= media[:text] %>
+            </li>
+          <% end %>
         </ul>
-        <h4>For quick response, fill out the form below & I'll contact you as soon as I can.</h4>
+        <h4><%= Settings.contact.form_text %></h4>
 
         <%= form_tag(pages_contact_path, method: "get", remote: true, class: 'form-horizontal') do %>
           <div id="flash"></div>
