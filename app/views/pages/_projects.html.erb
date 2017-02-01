@@ -1,86 +1,56 @@
 <div class="row">
     <div class="col-lg-12">
-        <h1>Projects</h1>
+        <h1><%= Settings.projects.title %></h1>
     </div>
     <!-- Project -->
     <div class="col-lg-6 panel panel-default">
-      <div class="panel-heading"><strong>BeaconBot</strong></div>
+      <div class="panel-heading"><strong><%= Settings.projects[:beaconbot].title %></strong></div>
       <div class="panel-body embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BgrFI5o5DLI" frameborder="0" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="<%= Settings.projects[:beaconbot].media %>" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="panel-footer intro">
-        It is common for items such as keychains and remote TV controls to get lost.
-        Time to find lost items can sometimes take hours. The solution
-        to that problem is to attach a beacon to a keychain, and whenever
-        the keychain is lost, a self-driving car robot can be deployed to find
-        the lost item. Using Bluetooth as a connection medium between the robot
-        and the beacon, robot will navigate an area to reach the beacon’s position.
+        <%= Settings.projects[:beaconbot].text %>
       </div>
     </div>
 
     <!-- Project -->
     <div class="col-lg-6 panel panel-default">
-      <div class="panel-heading"><strong>ASK - Automatic Score Keeper</strong></div>
+      <div class="panel-heading"><strong><%= Settings.projects[:ask].title %></strong></div>
       <div class="panel-body embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/t9QC4Aw64tE" frameborder="0" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="<%= Settings.projects[:ask].media %>" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="panel-footer intro">
-        Built as team project, ASK is part of a research at Wentworth Institute
-        of Technology to make a cornhole-playing robot. The automatic score keeper
-        predicts score for both players (utilizing computer vision library openCV),
-        using an image or a video stream of a cornhole game. I've created the metrics
-        tool to validate the software by comparing predictions with data from a dataset
-        of cornhole game state images. ASK accomplished ~90% accuracy on color detection
-        and ~85% accuracy on location detection (a bag on/off the board, or in the hole).
+        <%= Settings.projects[:ask].text %>
       </div>
     </div>
 
     <!-- Project -->
     <div class="col-lg-6 panel panel-default">
-      <div class="panel-heading"><strong>SDR - Simplified Digit Recognition</strong></div>
+      <div class="panel-heading"><strong><%= Settings.projects[:sdr].title %></strong></div>
       <div class="panel-body">
-        <div class="col-xs-6 col-sm-3">
-          <%= image_tag 'sdr_zero.png', class: "img-responsive img-thumbnail" %>
-        </div>
-        <div class="col-xs-6 col-sm-3">
-          <%= image_tag 'sdr_first.png', class: "img-responsive img-thumbnail" %>
-        </div>
-        <div class="col-xs-6 col-sm-3">
-          <%= image_tag 'sdr_second.png', class: "img-responsive img-thumbnail" %>
-        </div>
-        <div class="col-xs-6 col-sm-3">
-          <%= image_tag 'sdr_third.png', class: "img-responsive img-thumbnail" %>
-        </div>
+        <% Settings.projects[:sdr].media.each do |item| %>
+          <div class="col-xs-6 col-sm-3">
+            <%= image_tag item, class: "img-responsive img-thumbnail" %>
+          </div>
+        <% end %>
       </div>
       <div class="panel-footer intro">
-        Developed in the Intro to Artificial Intelligence course, Simplified Digit
-        Recognition (SDR) is a tool that helps to recognize digits from an image without
-        a lot of background noises. Used Python as the main language along with
-        computer vision and machine learning libraries, training SVM classifier on
-        the MNIST database. Achieved 91% accuracy on printed digits only, 85%
-        accuracy on printed digits with other elements, and accuracy of
-        approximately 70% on handwritten digits.
+        <%= Settings.projects[:sdr].text %>
       </div>
     </div>
 
     <!-- Project -->
     <div class="col-lg-6 panel panel-default">
-      <div class="panel-heading"><strong>Minesweeper (written in Assembly)</strong></div>
+      <div class="panel-heading"><strong><%= Settings.projects[:minesweeper].title %></strong></div>
       <div class="panel-body">
-        <div class="col-xs-4 col-sm-4">
-          <%= image_tag 'minesweeper1.png', class: "img-responsive img-thumbnail" %>
-        </div>
-        <div class="col-xs-4 col-sm-4">
-          <%= image_tag 'minesweeper2.png', class: "img-responsive img-thumbnail" %>
-        </div>
-        <div class="col-xs-4 col-sm-4">
-          <%= image_tag 'minesweeper3.png', class: "img-responsive img-thumbnail" %>
-        </div>
+        <% Settings.projects[:minesweeper].media.each do |item| %>
+          <div class="col-xs-4 col-sm-4">
+            <%= image_tag item, class: "img-responsive img-thumbnail" %>
+          </div>
+        <% end %>
       </div>
       <div class="panel-footer intro">
-        Written in Assembly language, the developed Minesweeper game includes all
-        features that a standard game have: a grid with mines, reset button, flagging
-        feature, timer, and how-to-play window.
+        <%= Settings.projects[:minesweeper].text %>
       </div>
     </div>
 </div>

@@ -1,18 +1,18 @@
 <div class="row">
     <div class="col-lg-12">
-      <h1><%= Settings.home.intro.title %></h1>
+      <h1><%= Settings.intro.title %></h1>
     </div>
     <div class="col-sm-3 col-xs-12 text-center">
-      <%= image_tag Settings.home.intro.image, class: "img-responsive img-circle img-profile" %>
+      <%= image_tag Settings.intro.image, class: "img-responsive img-circle img-profile" %>
     </div>
     <div class="col-sm-9 col-xs-12">
       <p class="intro">
-        <%= Settings.home.intro.main_text %>
+        <%= Settings.intro.main_text %>
       </p>
       <p>
-        <b><%= Settings.home.intro.skills_title %></b>
+        <b><%= Settings.intro.skills_title %></b>
         <ul>
-          <% Settings.home.intro.skills.each do |type, skills| %>
+          <% Settings.intro.skills.each do |type, skills| %>
             <li><strong><%= type %>: </strong><%= skills %></li>
           <% end %>
         </ul>
@@ -21,7 +21,7 @@
     </div>
 
     <%=
-      button_to Settings.home.intro.resume_button, pages_resume_pdf_path,
+      button_to Settings.intro.resume_button, pages_resume_pdf_path,
       method: "get", class: "btn btn-success btn-lg",
       form: { target: "_blank" }
     %>

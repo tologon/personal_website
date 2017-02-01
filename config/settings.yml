@@ -2,25 +2,70 @@ name: Tologon Eshimkanov
 # ugly solution that needs refactoring
 header_menus: [projects, contact]
 home_sections: {intro: 'Intro', projects: 'Projects', contact: 'Contact'}
+# ------------------------------------------------------------------------------
+intro:
+  title: About Me
+  image: profile.png
+  main_text:
+    I have found my true passion in programming.
+    I love to solve challenges, whether it is navigating a robot to
+    its destination using only Bluetooth, or recognizing printed digits on an image.
+    Having a background in Computer Science and a great, hands-on experience as a
+    Software QA Engineer intern at SessionM (the Boston start-up), I help
+    people to solve their problems by brainstorming, planning, and coding solutions.
+  skills_title: Technical skills
+  skills:
+    Languages: intermediate - Java, Ruby; elementary - Python, C++, JavaScript, Assembly
+    Web: Ruby on Rails, HTML/CSS/JS, ChartJS, RESTful APIs, MVC
+    Web services: Heroku, AWS - EC2
+    Mobile: Android Studio, XML
+    Testing: Jenkins, Travis, JMeter, Selenium
+    Others: git, makefile, HTTP signature, PostgreSQL, OpenCV, Raspberry Pi
+  resume_button: View my resume
+# ------------------------------------------------------------------------------
+projects:
+  title: Projects
 
-home:
-  intro:
-    title: About Me
-    image: profile.png
-    main_text:
-      I have found my true passion in programming.
-      I love to solve challenges, whether it is navigating a robot to
-      its destination using only Bluetooth, or recognizing printed digits on an image.
-      Having a background in Computer Science and a great, hands-on experience as a
-      Software QA Engineer intern at SessionM (the Boston start-up), I help
-      people to solve their problems by brainstorming, planning, and coding solutions.
-    skills_title: Technical skills
-    skills: {
-      Languages: 'intermediate - Java, Ruby; elementary - Python, C++, JavaScript, Assembly',
-      Web: 'Ruby on Rails, HTML/CSS/JS, ChartJS, RESTful APIs, MVC',
-      Web services: 'Heroku, AWS - EC2',
-      Mobile: 'Android Studio, XML',
-      Testing: 'Jenkins, Travis, JMeter, Selenium',
-      Others: 'git, makefile, HTTP signature, PostgreSQL, OpenCV, Raspberry Pi'
-      }
-    resume_button: View my resume
+  beaconbot:
+    title: BeaconBot
+    media: https://www.youtube.com/embed/BgrFI5o5DLI
+    text:
+      It is common for items such as keychains and remote TV controls to get lost.
+      Time to find lost items can sometimes take hours. The solution
+      to that problem is to attach a beacon to a keychain, and whenever
+      the keychain is lost, a self-driving car robot can be deployed to find
+      the lost item. Using Bluetooth as a connection medium between the robot
+      and the beacon, robot will navigate an area to reach the beacon’s position.
+
+  ask:
+    title: ASK - Automatic Score Keeper
+    media: https://www.youtube.com/embed/t9QC4Aw64tE
+    text:
+      Built as team project, ASK is part of a research at Wentworth Institute
+      of Technology to make a cornhole-playing robot. The automatic score keeper
+      predicts score for both players (utilizing computer vision library openCV),
+      using an image or a video stream of a cornhole game. I've created the metrics
+      tool to validate the software by comparing predictions with data from a dataset
+      of cornhole game state images. ASK accomplished ~90% accuracy on color detection
+      and ~85% accuracy on location detection (a bag on/off the board, or in the hole).
+
+  sdr:
+    title: SDR - Simplified Digit Recognition
+    media: [sdr_zero.png, sdr_first.png, sdr_second.png, sdr_third.png]
+    text:
+      Developed in the Intro to Artificial Intelligence course, Simplified Digit
+      Recognition (SDR) is a tool that helps to recognize digits from an image without
+      a lot of background noises. Used Python as the main language along with
+      computer vision and machine learning libraries, training SVM classifier on
+      the MNIST database. Achieved 91% accuracy on printed digits only, 85%
+      accuracy on printed digits with other elements, and accuracy of
+      approximately 70% on handwritten digits.
+
+  minesweeper:
+    title: Minesweeper (written in Assembly)
+    media: [minesweeper1.png, minesweeper2.png, minesweeper3.png]
+    text:
+      'Written in Assembly language, the developed Minesweeper game includes alls
+      features that a standard game have: a grid with mines, reset button, flagging
+      feature, timer, and how-to-play window.'
+# ------------------------------------------------------------------------------
