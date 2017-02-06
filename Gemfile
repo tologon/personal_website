@@ -18,6 +18,7 @@ gem 'pg',           '0.18.4'
 gem 'scout_apm',    '2.1.20'
 gem 'config',       '1.4.0'
 gem 'devise',       '4.2.0'
+gem 'psych',        '2.2.2'
 
 gem "recaptcha", '4.0.1', require: "recaptcha/rails"
 
