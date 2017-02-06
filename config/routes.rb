@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin/main'
+
   devise_for :users,
     skip: [:confirmations, :passwords, :registrations],
     controllers: { sessions: 'users/sessions' }
