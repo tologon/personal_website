@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <% if controller_name == 'sessions' %>
+            <% if controller_name != 'pages' %>
               <%= link_to Settings.name, root_url, id: 'logo', class: "navbar-brand page-scroll" %>
             <% else %>
               <a id="logo" class="navbar-brand page-scroll" href="#page-top"><%= Settings.name %></a>
