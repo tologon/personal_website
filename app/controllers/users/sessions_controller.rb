@@ -8,7 +8,11 @@ before_action :configure_sign_in_params, only: [:create]
 
   # POST /resource/sign_in
   def create
-    super
+    # copy of official Devise code
+    self.resource = warden.authenticate!(auth_options)
+    set_flash_message!(:notice, :signed_in)
+    sign_in(resource_name, resource)
+    yield resource if block_given?
     if resource.save
       redirect_to admin_main_path
     end
@@ -16,7 +20,7 @@ before_action :configure_sign_in_params, only: [:create]
 
   # DELETE /resource/sign_out
   def destroy
-    # super
+    super
   end
 
   protected
