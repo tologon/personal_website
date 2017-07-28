@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   end
 
   get   'pages/contact'
-  get   'pages/resume_pdf'
   get   'pages/home'
   root  'pages#home'
 
